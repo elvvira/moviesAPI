@@ -1,7 +1,18 @@
 .header {
+  height: 60px;
   display: flex;
   justify-content: space-around;
+  background-color: var(--medium);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
   &__nav {
     display: flex;
+    gap: 1rem;
+  }
+  &__avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    border: 1px solid white;
   }
 }

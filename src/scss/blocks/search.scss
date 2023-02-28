@@ -1,0 +1,10 @@
+.search{
+    display: flex;
+    gap: 1rem;
+    &__input{
+        width: 300px;
+        background-color: var(--dark);
+        border-color: transparent;
+        font-family: arial;
+    }
+}
