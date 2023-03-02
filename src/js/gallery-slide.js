@@ -1,10 +1,17 @@
 import { fetchData } from './data.js';
+import { URLS } from './data.js';
 const gallery = document.getElementById('gallery');
 
 const createGallerySlide = async () => {
-  const data = await fetchData('https://api.themoviedb.org/3/trending/all/day?api_key=741ae538edadaed8a58d03ea1492445c');
+  const data = await fetchData(URLS[0].link);
 
   const fragment = document.createDocumentFragment();
+
+  const galleryTitle = document.createElement('p');
+  galleryTitle.textContent = URLS[0].title;
+  galleryTitle.classList.add('gallery__subtitle');
+
+  gallery.parentElement.prepend(galleryTitle);
 
   data.results.forEach(data => {
     // console.log(data);

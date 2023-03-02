@@ -1,16 +1,24 @@
 import { fetchData } from './data.js';
+// import { galleries } from './index.js';
+
 const galleryRecommended = document.getElementById('gallery-recommended');
 
-const createGallery = async () => {
-  const data = await fetchData('https://api.themoviedb.org/3/movie/popular?api_key=741ae538edadaed8a58d03ea1492445c&language=en-US&page=1');
+const createGallery = async url => {
+  const data = await fetchData(url.link);
 
   const fragment = document.createDocumentFragment();
+
+  const galleryTitle = document.createElement('p');
+  galleryTitle.textContent = url.title;
+  galleryTitle.classList.add('gallery__subtitle');
+  galleryRecommended.append(galleryTitle);
 
   data.results.forEach(data => {
     // console.log(data);
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery__item', 'gallery__item--recommended');
     galleryItem.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`;
+    galleryItem.dataset.id = data.id;
     fragment.append(galleryItem);
 
     const galleryCheckContainer = document.createElement('div');

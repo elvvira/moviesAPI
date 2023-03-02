@@ -8,6 +8,20 @@ import '../scss/styles.scss';
 
 import { createGallerySlide } from './gallery-slide';
 import { createGallery } from './gallery';
+import { URLS } from './data.js';
+// const gallery = document.getElementById('gallery');
+const galleryRecommended = document.getElementById('gallery-recommended');
 
 createGallerySlide();
-createGallery();
+
+const galleries = () => {
+  for (let index = 1; index < URLS.length; index++) {
+    createGallery(URLS[index]);
+  }
+};
+
+galleries();
+
+galleryRecommended.addEventListener('click', e => {
+  console.dir(e.target);
+});

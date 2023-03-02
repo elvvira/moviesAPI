@@ -8,7 +8,7 @@
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div>
         <img src="assets/logo.svg" alt="" />
@@ -39,7 +39,7 @@
         <input class="search__input" type="text" placeholder="Search for movies or TV series" />
       </div>
       <div>
-        <p>Trending</p>
+        <!-- <p>Trending</p> -->
         <div id="gallery" class="gallery">
           <!-- <div class="gallery__item">
             
@@ -62,9 +62,8 @@
       </div>
 
       <div>
-        <p>Recommended for you</p>
-
-        <div id="gallery-recommended" class="gallery gallery--recommended">
+        <div id="gallery-recommended" class="gallery--recommended">
+          <!-- <p>Recommended for you</p> -->
           <!-- <div class="gallery__item gallery__item--recommended">
             <div class="gallery__check">
               <img src="assets/icon-bookmark-empty.svg" alt="" />
@@ -84,6 +83,35 @@
         </div>
       </div>
     </main>
+    <div class="modal">
+      <!-- <img class="modal__image" src="" alt="" /> -->
+      <div class="modal__container">
+        <div class="modal__image"></div>
+        <div class="modal__title">
+          <div class="modal__title--big">Pelicula</div>
+          <div>Description</div>
+        </div>
+        <p class="modal__valoration">3.3</p>
+        <div>
+          <div>
+            <p>Length</p>
+            <p>100 min.</p>
+          </div>
+          <div>
+            <p>Lenguage</p>
+            <p>English</p>
+          </div>
+          <div>
+            <p>Year</p>
+            <p>2023</p>
+          </div>
+          <div>
+            <p>Status</p>
+            <p>N/A</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
