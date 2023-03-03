@@ -35,3 +35,6 @@
     }
   }
 }
+.icon__home:hover {
+  filter: invert(1) sepia(1) hue-rotate(-50deg) saturate(7);
+}

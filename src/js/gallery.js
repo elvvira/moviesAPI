@@ -14,10 +14,12 @@ const createGallery = async url => {
   galleryRecommended.append(galleryTitle);
 
   data.results.forEach(data => {
-    // console.log(data);
+    // console.log(data.backdrop_path);
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery__item', 'gallery__item--recommended');
-    galleryItem.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`;
+    if (data.backdrop_path) {
+      galleryItem.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`;
+    }
     galleryItem.dataset.id = data.id;
     fragment.append(galleryItem);
 

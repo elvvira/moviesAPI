@@ -17,6 +17,7 @@ const createGallerySlide = async () => {
     // console.log(data);
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('gallery__item');
+    galleryItem.dataset.id = data.id;
     galleryItem.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`;
     fragment.append(galleryItem);
 

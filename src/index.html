@@ -16,7 +16,7 @@
       <nav>
         <ul class="header__nav">
           <li>
-            <img src="assets/icon-nav-home.svg" alt="" />
+            <img id="icon-home" class="icon__home" src="assets/icon-nav-home.svg" alt="" />
           </li>
           <li>
             <img src="assets/icon-nav-movies.svg" alt="" />
@@ -83,32 +83,47 @@
         </div>
       </div>
     </main>
-    <div class="modal">
+    <div id="modal" class="modal">
       <!-- <img class="modal__image" src="" alt="" /> -->
       <div class="modal__container">
-        <div class="modal__image"></div>
-        <div class="modal__title">
-          <div class="modal__title--big">Pelicula</div>
-          <div>Description</div>
+        <div id="image" class="modal__image"></div>
+        <div class="modal__title-container">
+          <div id="movie-title" class="modal__title">Pelicula</div>
+          <div id="tagline">Description</div>
         </div>
-        <p class="modal__valoration">3.3</p>
-        <div>
-          <div>
-            <p>Length</p>
-            <p>100 min.</p>
+        <div id="puntuation" class="modal__valoration"></div>
+        <div class="modal__properties">
+          <div class="modal__container">
+            <p class="modal__section-title">Length</p>
+            <p id="movie-time">100</p>
           </div>
-          <div>
-            <p>Lenguage</p>
-            <p>English</p>
+          <div class="modal__container">
+            <p class="modal__section-title">Language</p>
+            <p id="language">English</p>
           </div>
-          <div>
-            <p>Year</p>
-            <p>2023</p>
+          <div class="modal__container">
+            <p class="modal__section-title">Year</p>
+            <p id="year">2023</p>
           </div>
-          <div>
-            <p>Status</p>
-            <p>N/A</p>
+          <div class="modal__container">
+            <p class="modal__section-title">Status</p>
+            <p id="movie-status">N/A</p>
           </div>
+        </div>
+
+        <div class="modal__genres-container">
+          <h2>Genres</h2>
+          <div id="genres" class="modal__genres">
+            <!-- <p class="modal__genres-box">Action</p> -->
+          </div>
+        </div>
+
+        <div class="modal__synopsis">
+          <h2>Synopsis</h2>
+          <p id="synopsis">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id commodi minima cupiditate et illum voluptas rerum debitis nulla, expedita molestias
+            doloribus? Iste voluptatem dolores quae debitis tenetur quo repellendus atque.
+          </p>
         </div>
       </div>
     </div>

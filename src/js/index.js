@@ -9,8 +9,10 @@ import '../scss/styles.scss';
 import { createGallerySlide } from './gallery-slide';
 import { createGallery } from './gallery';
 import { URLS } from './data.js';
-// const gallery = document.getElementById('gallery');
+import { modalInformation } from './modal.js';
+
 const galleryRecommended = document.getElementById('gallery-recommended');
+const gallery = document.getElementById('gallery');
 
 createGallerySlide();
 
@@ -21,7 +23,11 @@ const galleries = () => {
 };
 
 galleries();
+gallery.addEventListener('click', e => {
+  modalInformation(e.target.dataset.id);
+});
 
 galleryRecommended.addEventListener('click', e => {
-  console.dir(e.target);
+  // console.dir(e.target);
+  modalInformation(e.target.dataset.id);
 });
